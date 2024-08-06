@@ -70,7 +70,7 @@ export const CoalProductsItem = () => {
               эффектом.
             </p>
           </div>
-          <Button text="Заказать" />
+          <Button>Заказать</Button>
         </div>
       </div>
     </section>
