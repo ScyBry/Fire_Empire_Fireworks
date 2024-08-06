@@ -33,7 +33,7 @@ export const WorkCard: FC<WorkSliderProps> = ({ work }) => {
           <h4>{work.title}</h4>
           <p>{work.text}</p>
           <NavLink to={`/workDetail/${work.id}`}>
-            <Button text={"Подробнее"} />
+            <Button>Подробнее</Button>
           </NavLink>
         </div>
       </div>
