@@ -1,0 +1,12 @@
+body {
+  font-family: "Raleway", sans-serif;
+  background-color: #eceff4;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+}
