@@ -4,6 +4,7 @@ import { Layout } from "../pages/Layout/Layout";
 import { FireworksPage } from "../pages/FireworksPage/FireworksPage.tsx";
 import { WorkDetailPage } from "../pages/WorkDetailPage/WorkDetailPage.tsx";
 import { CoalPage } from "../pages/CoalPage/CoalPage.tsx";
+import { ContactsPage } from "../pages/ContactsPage/ContactsPage.tsx";
 
 export const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ export const router = createBrowserRouter([
       {
         path: "/coal",
         element: <CoalPage />,
+      },
+      {
+        path: "/contacts",
+        element: <ContactsPage />,
       },
     ],
   },

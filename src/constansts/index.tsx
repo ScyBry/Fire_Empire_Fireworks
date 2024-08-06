@@ -84,7 +84,7 @@ export const navLinks = [
     link: "/coal",
   },
   {
-    name: "Связь",
-    link: "/contact",
+    name: "Контакты",
+    link: "/contacts",
   },
 ];
