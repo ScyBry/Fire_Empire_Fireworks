@@ -10,7 +10,7 @@ export const works: IWork[] = [
   {
     id: 1,
     title: "Главный музыкальный уикенд Viva Braslav Open Air",
-    date: "29.08.2003",
+    date: "29 июля 2003",
     text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi assumenda consequatur eius, eum harum impedit ipsam iste iusto maxime minima minus natus recusandae soluta veritatis, voluptatem? Beatae natus nobis unde?",
     media: [
       { type: "img", src: firework1_1 },
