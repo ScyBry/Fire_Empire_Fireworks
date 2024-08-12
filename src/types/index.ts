@@ -6,6 +6,7 @@ export interface MediaItem {
 export interface IWork {
   id: number;
   title: string;
+  date: string;
   text: string;
   media: MediaItem[];
 }

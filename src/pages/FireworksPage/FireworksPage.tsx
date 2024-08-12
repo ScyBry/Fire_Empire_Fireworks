@@ -1,38 +1,18 @@
 import React from "react";
 import styles from "./styles.module.sass";
-import { WorkCard } from "../../components/WorkCard/WorkCard.tsx";
 import { works } from "../../constansts";
-import Slider from "react-slick";
+import { WorkCard } from "../../components/WorkCard/WorkCard";
 
 export const FireworksPage: React.FC = () => {
-  let settings = {
-    infinite: true,
-    arrows: true,
-    dots: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
-
   return (
-    <div className={styles.worksPage}>
+    <section className={styles.fireworks}>
       <div className="container">
-        <div className={styles.worksPage__title}>
-          <h1>Наши работы</h1>
-        </div>
-
-        {/*<div className={styles.worksList}>*/}
-        {/*  {works.map((work) => (*/}
-        {/*    <WorkCard work={work} />*/}
-        {/*  ))}*/}
-        {/*</div>*/}
-
-        <Slider {...settings}>
+        <div className={styles.works__container}>
           {works.map((work) => (
-            <WorkCard work={work} />
+            <WorkCard key={work.id} work={work} />
           ))}
-        </Slider>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };

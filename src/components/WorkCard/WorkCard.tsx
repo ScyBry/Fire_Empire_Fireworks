@@ -1,7 +1,6 @@
 import { FC } from "react";
 import { IWork } from "../../types";
 import styles from "./styles.module.sass";
-import Slider from "react-slick";
 import { Button } from "../Button/Button.tsx";
 import { NavLink } from "react-router-dom";
 
@@ -10,33 +9,23 @@ type WorkSliderProps = {
 };
 
 export const WorkCard: FC<WorkSliderProps> = ({ work }) => {
-  let settings = {
-    infinite: true,
-    arrows: false,
-    dots: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
-
   return (
-    <div className={styles.work_item}>
-      <div className={styles.work_item__slider}>
-        <Slider {...settings}>
-          {work.media.map((media) => (
-            <img key={media.src} src={media.src} alt="img" />
-          ))}
-        </Slider>
-      </div>
-      <div className={styles.work_item__content}>
-        <div>
-          <h4>{work.title}</h4>
-          <p>{work.text}</p>
-          <NavLink to={`/workDetail/${work.id}`}>
-            <Button>Подробнее</Button>
-          </NavLink>
+    <NavLink to={`/workDetail/${work.id}`}>
+      <div className={styles.work_item}>
+        <div className={styles.img__container}>
+          <img src={work.media[0].src} alt={work.title} />
+          <div className={styles.img__overlay}>
+            <NavLink to={`/workDetail/${work.id}`}>
+              <Button>Подробнее</Button>
+            </NavLink>
+          </div>
+        </div>
+
+        <div className={styles.item__text}>
+          <h3 className={styles.work_title}>{work.title}</h3>
+          <p className={styles.work_date}>ДАТА: {work.date}</p>
         </div>
       </div>
-    </div>
+    </NavLink>
   );
 };

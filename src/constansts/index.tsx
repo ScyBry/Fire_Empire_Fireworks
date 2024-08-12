@@ -9,7 +9,8 @@ import instagram from "../assets/instagram-icon.svg";
 export const works: IWork[] = [
   {
     id: 1,
-    title: "Стелла1",
+    title: "Главный музыкальный уикенд Viva Braslav Open Air",
+    date: "29.08.2003",
     text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi assumenda consequatur eius, eum harum impedit ipsam iste iusto maxime minima minus natus recusandae soluta veritatis, voluptatem? Beatae natus nobis unde?",
     media: [
       { type: "img", src: firework1_1 },
@@ -19,7 +20,8 @@ export const works: IWork[] = [
   },
   {
     id: 2,
-    title: "Стелла2",
+    title: "Чемпионат Мира 2016 по фейерверкам в Зеленоградске",
+    date: "29.08.2003",
     text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi assumenda consequatur eius, eum harum impedit ipsam iste iusto maxime minima minus natus recusandae soluta veritatis, voluptatem? Beatae natus nobis unde?",
     media: [
       { type: "img", src: firework1_1 },
@@ -30,6 +32,7 @@ export const works: IWork[] = [
   {
     id: 3,
     title: "Стелла3",
+    date: "29.08.2003",
     text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi assumenda consequatur eius, eum harum impedit ipsam iste iusto maxime minima minus natus recusandae soluta veritatis, voluptatem? Beatae natus nobis unde?",
     media: [
       { type: "img", src: firework1_1 },
@@ -40,6 +43,7 @@ export const works: IWork[] = [
   {
     id: 4,
     title: "Стелла4",
+    date: "29.08.2003",
     text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi assumenda consequatur eius, eum harum impedit ipsam iste iusto maxime minima minus natus recusandae soluta veritatis, voluptatem? Beatae natus nobis unde?",
     media: [
       { type: "img", src: firework1_1 },
@@ -50,6 +54,7 @@ export const works: IWork[] = [
   {
     id: 5,
     title: "Стелла5",
+    date: "29.08.2003",
     text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi assumenda consequatur eius, eum harum impedit ipsam iste iusto maxime minima minus natus recusandae soluta veritatis, voluptatem? Beatae natus nobis unde?",
     media: [
       { type: "img", src: firework1_1 },
