@@ -81,8 +81,12 @@ export const socialLinks = [
 
 export const navLinks = [
   {
-    name: "Фейерверки",
-    link: "/fireworks",
+    name: "Шоу",
+    link: "/shou",
+  },
+  {
+    name: "Проекты",
+    link: "/projects",
   },
   {
     name: "Уголь",

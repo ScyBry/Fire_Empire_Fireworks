@@ -3,6 +3,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import styles from "./styles.module.sass";
 import { Button } from "../Button/Button";
+import emailjs from "@emailjs/browser";
 
 const schema = z.object({
   name: z.string().min(1, "Имя обязательно"),
@@ -18,10 +19,34 @@ export const ContactForm = () => {
     formState: { errors },
   } = useForm({
     resolver: zodResolver(schema),
+    mode: "onChange",
   });
 
+  const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID!;
+  const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID!;
+  const userId = import.meta.env.VITE_EMAILJS_USER_ID!;
+
   const onSubmit = (data: any) => {
-    console.log(data);
+    const template = {
+      name: data.name,
+      phone_number: data.phone,
+      email: data.email,
+      message: data.message,
+      reply_to: data.email,
+    };
+
+    emailjs.send(serviceId, templateId, template, userId).then(
+      (result) => {
+        console.log("Email successfully sent!", result.text);
+        alert("Ваше сообщение было успешно отправлено!");
+      },
+      (error) => {
+        console.log("Failed to send email.", error.text);
+        alert(
+          "Произошла ошибка при отправке сообщения. Пожалуйста, попробуйте еще раз.",
+        );
+      },
+    );
   };
 
   return (

@@ -1,10 +1,11 @@
 import { createBrowserRouter } from "react-router-dom";
 import { MainPage } from "../pages/MainPage/MainPage";
 import { Layout } from "../pages/Layout/Layout";
-import { FireworksPage } from "../pages/FireworksPage/FireworksPage.tsx";
-import { WorkDetailPage } from "../pages/WorkDetailPage/WorkDetailPage.tsx";
+import { ProjectsPage } from "../pages/ProjectsPage/ProjectsPage.tsx";
+import { ProjectDetailPage } from "../pages/ProjectDetailPage/ProjectDetailPage.tsx";
 import { CoalPage } from "../pages/CoalPage/CoalPage.tsx";
 import { ContactsPage } from "../pages/ContactsPage/ContactsPage.tsx";
+import { ShowPage } from "../pages/ShowPage/ShowPage.tsx";
 
 export const router = createBrowserRouter([
   {
@@ -16,12 +17,16 @@ export const router = createBrowserRouter([
         element: <MainPage />,
       },
       {
-        path: "/fireworks",
-        element: <FireworksPage />,
+        path: "/projects",
+        element: <ProjectsPage />,
+      },
+      {
+        path: "/shou",
+        element: <ShowPage />,
       },
       {
         path: "/workDetail/:id",
-        element: <WorkDetailPage />,
+        element: <ProjectDetailPage />,
       },
       {
         path: "/coal",

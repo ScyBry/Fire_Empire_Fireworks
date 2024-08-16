@@ -8,29 +8,29 @@ export const Header = () => {
   return (
     <header className={styles.header}>
       <div className="container">
-        <div className={styles.header__content}>
-          <div className={styles.header__logo}>
-            <NavLink to={"/"}>
-              <img src={Logo} alt="Лого" />
+        <div className={styles.header__inner}>
+          <div className={styles.header__branding}>
+            <NavLink to="/">
+              <img src={Logo} alt="Лого" className={styles.logo} />
             </NavLink>
-            <nav className={styles.header__nav}>
+            <nav className={styles.navigation}>
               {navLinks.map((link) => (
                 <NavLink
                   key={link.name}
                   to={link.link}
-                  className={styles.navLink}
+                  className={`hover-underline-animation ${styles.navigation__link}`}
                 >
                   {link.name}
                 </NavLink>
               ))}
             </nav>
           </div>
-          <div className={styles.contacts__wrapper}>
-            <div className={styles.contacts__item}>
+          <div className={styles.contact__info}>
+            <div className={styles.contact__item}>
               <LocationOn fontSize="small" />
               <p>Гродненская область, Берестовицкий р-н, д. Лесная</p>
             </div>
-            <div className={styles.contacts__item}>
+            <div className={styles.contact__item}>
               <Phone fontSize="small" />
               <p>8 (01511) 7-03-37</p>
             </div>

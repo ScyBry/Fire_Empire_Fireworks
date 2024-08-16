@@ -3,6 +3,32 @@ body
   background-color: #rgb(249, 249, 249) !important
   font-feature-settings: "pnum" on, "lnum" on
 
+  h2
+    font-weight: 700
+    font-size: 1.875rem
+    text-transform: uppercase
+
 .container
   margin: 0 auto
   max-width: 1200px
+
+.hover-underline-animation
+  display: inline-block
+  position: relative
+  color: #E5E8EE
+
+  &::after
+    content: ''
+    position: absolute
+    width: 100%
+    transform: scaleX(0)
+    height: 2px
+    bottom: -5px
+    left: 0
+    background-color: #E5E8EE
+    transform-origin: bottom right
+    transition: transform 0.25s ease-out
+
+  &:hover::after
+    transform: scaleX(1)
+    transform-origin: bottom left

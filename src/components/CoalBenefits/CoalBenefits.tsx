@@ -9,21 +9,21 @@ const benefits = [
 
 export const CoalBenefits = () => {
   return (
-    <section className={styles.benefits}>
+    <section className={styles.coalBenefits}>
       <div className="container">
-        <header className={styles.benefits__header}>
+        <header className={styles.coalBenefits__header}>
           <h2>Преимущества древесного угля</h2>
         </header>
-        <div className={styles.benefits__list}>
+        <ul className={styles.coalBenefits__list}>
           {benefits.map((benefit, index) => (
-            <article key={index} className={styles.benefits__item}>
-              <div className={styles.item__number}>
+            <li key={benefit} className={styles.coalBenefits__item}>
+              <div className={styles.coalBenefits__number}>
                 <span>{index + 1}</span>
               </div>
               <p>{benefit}</p>
-            </article>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   );

@@ -1,53 +1,45 @@
-.item
-  margin-top: 40px
+.coalProducts
+  margin-top: 2.5rem
 
-.item__title
+.coalProducts__header
   font-weight: 700
-  font-size: 30px
+  font-size: 1.875rem
 
-.item__content
+.coalProduct
   display: flex
   flex-wrap: wrap
   justify-content: space-between
-  margin-top: 40px
+  margin-top: 2.5rem
 
-.content__image
-  max-width: 520px
+  &__image
+    max-width: 32.5rem
+    img
+      max-height: 20rem
+      border-radius: 0.625rem
 
-  img
-    max-height: 320px
-    border-radius: 10px
+  &__details
+    max-width: 35rem
+    display: flex
+    flex-direction: column
+    gap: 1.25rem
 
-.slider__item
-  position: relative
-
-  p
-    position: absolute
-    bottom: 10px
-    left: 10px
-    padding: 10px 30px
+  &__title
+    font-size: 1.375rem
     font-weight: 700
-    font-size: 14px
-    line-height: 22px
-    text-align: center
-    border-radius: 20px 20px 20px 0
-    background-color: #2A2E33
-    color: #ffffff
-    transition: 0.3s ease-in
 
-.content__text
-  max-width: 560px
-  display: flex
-  flex-direction: column
-  gap: 20px
+  &__description
+    display: flex
+    flex-direction: column
+    gap: 0.625rem
+    font-size: 1rem
+    line-height: 1.5625rem
 
-.text__title
-  font-size: 22px
-  font-weight: 700
+.reverseOrder
+  flex-direction: row-reverse
 
-.text
-  display: flex
-  flex-direction: column
-  gap: 10px
-  font-size: 16px
-  line-height: 25px
+@media (max-width: 768px)
+  .coalProduct
+    flex-direction: column
+
+  .reverseOrder
+    flex-direction: column

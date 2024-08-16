@@ -12,12 +12,20 @@ export const Footer: FC = () => {
       <div className="container">
         <div className={styles.footer__top}>
           <div className={styles.logo__wrapper}>
-            <img src={logo} alt="Logo" />
+            <NavLink to="/">
+              <img src={logo} alt="Logo" />
+            </NavLink>
             <p>Империя огня</p>
           </div>
           <div className={styles.navlinks__wrapper}>
             {navLinks.map((link) => (
-              <NavLink to={link.link}>{link.name}</NavLink>
+              <NavLink
+                key={link.name}
+                to={link.link}
+                className="hover-underline-animation"
+              >
+                {link.name}
+              </NavLink>
             ))}
           </div>
         </div>
