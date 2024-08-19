@@ -1,10 +1,16 @@
+import { useState } from "react";
 import styles from "./styles.module.sass";
 import Logo from "../../assets/logo.png";
 import { NavLink } from "react-router-dom";
 import { navLinks } from "../../constansts";
-import { Phone, LocationOn } from "@mui/icons-material";
+import { Phone, LocationOn, Menu, Close } from "@mui/icons-material";
+import { IconButton } from "@mui/material";
 
 export const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => setIsMenuOpen((prev) => !prev);
+
   return (
     <header className={styles.header}>
       <div className="container">
@@ -13,12 +19,24 @@ export const Header = () => {
             <NavLink to="/">
               <img src={Logo} alt="Лого" className={styles.logo} />
             </NavLink>
-            <nav className={styles.navigation}>
+
+            <IconButton className={styles.burgerMenu} onClick={toggleMenu}>
+              {isMenuOpen ? (
+                <Close fontSize="large" />
+              ) : (
+                <Menu fontSize="large" />
+              )}
+            </IconButton>
+
+            <nav
+              className={`${styles.navigation} ${isMenuOpen ? styles.navigation_open : ""}`}
+            >
               {navLinks.map((link) => (
                 <NavLink
                   key={link.name}
                   to={link.link}
                   className={`hover-underline-animation ${styles.navigation__link}`}
+                  onClick={() => setIsMenuOpen(false)}
                 >
                   {link.name}
                 </NavLink>
