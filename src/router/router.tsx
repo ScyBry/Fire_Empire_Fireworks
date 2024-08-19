@@ -6,7 +6,6 @@ import { ProjectDetailPage } from "../pages/ProjectDetailPage/ProjectDetailPage.
 import { CoalPage } from "../pages/CoalPage/CoalPage.tsx";
 import { ContactsPage } from "../pages/ContactsPage/ContactsPage.tsx";
 import { ShowPage } from "../pages/ShowPage/ShowPage.tsx";
-import path from "path";
 import { OurWorks } from "../pages/OurWorks/OurWorks.tsx";
 
 export const router = createBrowserRouter([
