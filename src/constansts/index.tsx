@@ -97,6 +97,10 @@ export const navLinks = [
     name: "Контакты",
     link: "/contacts",
   },
+  {
+    name: "Наши работы",
+    link: "/ourWorks",
+  },
 ];
 
 export const showItems: IShowItem[] = [
@@ -109,6 +113,13 @@ export const showItems: IShowItem[] = [
   },
   {
     id: 2,
+    imgSrc: show_img1,
+    title: "Спецэффекты",
+    subtitle: "Более 1000 работ",
+    text: "Шоу со спецэффектами способно сделать зрелищным любой праздник, будь то юбилей, свадьба, корпоративная вечеринка, презентация продукта, открытие магазина, городское мероприятие или международный фестиваль.",
+  },
+  {
+    id: 3,
     imgSrc: show_img1,
     title: "Спецэффекты",
     subtitle: "Более 1000 работ",
