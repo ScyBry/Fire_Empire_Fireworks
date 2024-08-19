@@ -10,3 +10,11 @@ export interface IWork {
   text: string;
   media: MediaItem[];
 }
+
+export interface IShowItem {
+  id: number;
+  imgSrc: string;
+  title: string;
+  subtitle: string;
+  text: string;
+}

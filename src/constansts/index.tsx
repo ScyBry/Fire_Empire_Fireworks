@@ -1,10 +1,11 @@
-import { IWork } from "../types";
+import { IShowItem, IWork } from "../types";
 import firework1_1 from "../assets/fireworks/firework1/firework1-1.jpg";
 import firework1_2 from "../assets/fireworks/firework1/firework1-2.jpg";
 import firework1_3 from "../assets/fireworks/firework1/firework1-3.jpg";
 import viber from "../assets/viber-icon.svg";
 import youtube from "../assets/youtube-icon.svg";
 import instagram from "../assets/instagram-icon.svg";
+import show_img1 from "../assets/show_images/show_img1.jpg";
 
 export const works: IWork[] = [
   {
@@ -95,5 +96,22 @@ export const navLinks = [
   {
     name: "Контакты",
     link: "/contacts",
+  },
+];
+
+export const showItems: IShowItem[] = [
+  {
+    id: 1,
+    imgSrc: show_img1,
+    title: "Спецэффекты",
+    subtitle: "Более 1000 работ",
+    text: "Шоу со спецэффектами способно сделать зрелищным любой праздник, будь то юбилей, свадьба, корпоративная вечеринка, презентация продукта, открытие магазина, городское мероприятие или международный фестиваль.",
+  },
+  {
+    id: 2,
+    imgSrc: show_img1,
+    title: "Спецэффекты",
+    subtitle: "Более 1000 работ",
+    text: "Шоу со спецэффектами способно сделать зрелищным любой праздник, будь то юбилей, свадьба, корпоративная вечеринка, презентация продукта, открытие магазина, городское мероприятие или международный фестиваль.",
   },
 ];

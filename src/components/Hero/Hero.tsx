@@ -7,7 +7,7 @@ export const Hero = () => {
   return (
     <section className={styles.hero}>
       <div className={"container"}>
-        <header className={styles.hero__header}>
+        <div className={styles.hero__header}>
           <motion.h3
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -24,7 +24,7 @@ export const Hero = () => {
           >
             ОРГАНИЗАЦИЯ ШОУ
           </motion.h1>
-        </header>
+        </div>
         <motion.div
           className={styles.hero__description}
           initial={{ opacity: 0 }}
