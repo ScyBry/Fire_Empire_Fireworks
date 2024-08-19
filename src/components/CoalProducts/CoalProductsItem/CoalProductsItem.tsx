@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styles from "./styles.module.sass";
 import coal1 from "../../../assets/coal/3kgcoal.jpg";
 import coal2 from "../../../assets/coal/10kgcoal.jpg";
@@ -7,17 +8,22 @@ export const CoalProductsItem = () => {
   return (
     <section className={styles.coalProducts}>
       <header className={styles.coalProducts__header}>
-        <h3>УГОЛЬ ДРЕВЕСНЫЙ «ИМПЕРСКИЙ»</h3>
+        <h2>УГОЛЬ ДРЕВЕСНЫЙ «ИМПЕРСКИЙ»</h2>
       </header>
 
-      <article className={styles.coalProduct}>
+      <motion.article
+        initial={{ opacity: 0, x: -100 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5 }}
+        className={styles.coalProduct}
+      >
         <div className={styles.coalProduct__image}>
           <img src={coal1} alt="Упаковка 3 кг" />
         </div>
         <div className={styles.coalProduct__details}>
-          <h4 className={styles.coalProduct__title}>
+          <h3 className={styles.coalProduct__title}>
             УГОЛЬ ДРЕВЕСНЫЙ «ИМПЕРСКИЙ»
-          </h4>
+          </h3>
           <div className={styles.coalProduct__description}>
             <p>
               УГОЛЬ ДРЕВЕСНЫЙ «ИМПЕРСКИЙ»
@@ -51,13 +57,18 @@ export const CoalProductsItem = () => {
           </div>
           <Button>Заказать</Button>
         </div>
-      </article>
+      </motion.article>
 
-      <article className={`${styles.coalProduct} `}>
+      <motion.article
+        initial={{ opacity: 0, x: 100 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5 }}
+        className={styles.coalProduct}
+      >
         <div className={styles.coalProduct__details}>
-          <h4 className={styles.coalProduct__title}>
+          <h3 className={styles.coalProduct__title}>
             УГОЛЬ ДРЕВЕСНЫЙ «ИМПЕРСКИЙ»
-          </h4>
+          </h3>
           <div className={styles.coalProduct__description}>
             <p>
               УГОЛЬ ДРЕВЕСНЫЙ «ИМПЕРСКИЙ»
@@ -94,7 +105,7 @@ export const CoalProductsItem = () => {
         <div className={styles.coalProduct__image}>
           <img src={coal2} alt="Упаковка 10 кг" />
         </div>
-      </article>
+      </motion.article>
     </section>
   );
 };

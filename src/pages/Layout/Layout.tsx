@@ -6,22 +6,19 @@ import { AboutCompany } from "../../components/AboutCompany/AboutCompany";
 import { useEffect } from "react";
 import { Question } from "../../components/Question/Question";
 import { ToastContainer } from "react-toastify";
+import { motion } from "framer-motion";
 
-const ScrollToTop = () => {
-  const { pathname } = useLocation();
+export const Layout = () => {
+  const location = useLocation();
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [pathname]);
+  }, [location]);
 
-  return null;
-};
-
-export const Layout = () => {
   return (
-    <div className={styles.app}>
+    <motion.div key={location.pathname} className={styles.app}>
       <ToastContainer />
-      <ScrollToTop />
+
       <Header />
       <main className={styles.app__content}>
         <Outlet />
@@ -29,6 +26,6 @@ export const Layout = () => {
       <AboutCompany />
       <Question />
       <Footer />
-    </div>
+    </motion.div>
   );
 };
