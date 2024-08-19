@@ -1,3 +1,3 @@
 export const Question = () => {
-  return <div>s</div>;
+  return <div></div>;
 };

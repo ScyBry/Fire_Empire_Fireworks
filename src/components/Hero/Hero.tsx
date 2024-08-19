@@ -47,7 +47,7 @@ export const Hero = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.4, duration: 0.5 }}
         >
-          <NavLink to="/shows">
+          <NavLink to="/shou">
             <Button>ШОУ</Button>
           </NavLink>
           <div className={styles.hero__divider}></div>
