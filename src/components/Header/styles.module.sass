@@ -15,14 +15,7 @@
 	align-items: center
 	width: 100%
 	flex-wrap: wrap
-
-.header__branding
-	display: flex
-	align-items: center
-	justify-content: space-between
-	width: 100%
-	gap: 2.5rem
-	position: relative
+	gap: 20px
 
 .burgerMenu
 	display: none
@@ -37,6 +30,9 @@
 .navigation
 	display: flex
 	gap: 2rem
+
+	.contact__info
+		display: none
 
 .navigation__link
 	text-decoration: none
@@ -60,8 +56,7 @@
 		padding: 0.5rem 1rem
 
 	.header__inner
-		flex-direction: column
-		align-items: flex-start
+		align-items: center
 
 	.logo
 		height: 35px
@@ -92,11 +87,19 @@
 		opacity: 0
 		pointer-events: none
 
+		.contact__info
+			display: block !important
+
 	.navigation_open
 		transform: translateY(0)
 		opacity: 1
 		pointer-events: auto
+		margin: 10px
 
-	.contact__info
-		align-items: flex-start
-		margin-top: 1rem
+	.contact__item
+		font-size: 13px
+		font-weight: 400
+
+	// .contact__info
+	// 	align-items: flex-start
+	// 	margin-top: 1rem
