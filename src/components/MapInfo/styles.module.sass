@@ -1,27 +1,37 @@
 .info
-	position: absolute
-	top: 10px
-	left: 10px
-	padding: 35px
-	background-color: #171718
-	color: #E5E8EE
+  position: absolute
+  top: 1rem
+  left: 1rem
+  padding: 2rem
+  background-color: #171718
+  color: #e5e8ee
+  border-radius: 0.5rem
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2)
+  max-width: 300px
+  z-index: 10
 
-	h5
-		font-size: 20px
-		text-transform: uppercase
-		font-weight: 700
-		margin-bottom: 10px
+  h5
+    font-size: 1.125rem
+    text-transform: uppercase
+    font-weight: 700
+    margin-bottom: 0.75rem
+    color: #e5e8ee
 
-.info__wrapper
-	display: flex
-	flex-direction: column
-	gap: 30px
+  .info__wrapper
+    display: flex
+    flex-direction: column
+    gap: 1.5rem
 
-	a
-		color: #E5E8EE
+  .info__item
+    display: flex
+    align-items: center
+    gap: 0.5rem
+    font-size: 0.875rem
 
-.info__item
-	display: flex
-	align-items: center
-	gap: 5px
-	font-size: 14px
+    a
+      color: #e5e8ee
+      text-decoration: none
+      transition: color 0.3s ease-in-out
+
+      &:hover
+        color: #007bff

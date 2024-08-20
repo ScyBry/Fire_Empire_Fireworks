@@ -11,20 +11,18 @@ export const ContactsPage = () => {
             <iframe
               title="map"
               src="https://yandex.ru/map-widget/v1/?um=constructor%3Aea1b2ebc98402400183d4a02ae0f197f01c1c7ab3309146dacd0055fae118e55&amp;source=constructor"
-              height={"600px"}
-              width={"100%"}
+              height="100%"
+              width="100%"
             ></iframe>
             <MapInfo />
           </div>
           <div className={styles.form__wrapper}>
-            <div className={styles.form__title}>
-              <h2>Свяжитесь с нами</h2>
-            </div>
-            <div className={styles.form__subtext}>
+            <h2 className={styles.form__title}>Свяжитесь с нами</h2>
+            <p className={styles.form__subtext}>
               Если у вас остались вопросы, оставьте свои контактные данные и
               наши специалисты свяжутся с вами для консультации по любым
               вопросам.
-            </div>
+            </p>
             <ContactForm />
           </div>
         </div>

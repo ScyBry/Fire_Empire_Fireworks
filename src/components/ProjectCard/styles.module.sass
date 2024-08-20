@@ -1,0 +1,88 @@
+.workItem
+  display: flex
+  flex-direction: column
+  width: 340px
+  height: 300px
+  background-color: #fff
+  border-radius: 5px
+  box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px
+  transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out
+
+  &:hover
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2)
+    transform: translateY(-5px)
+
+.imgContainer
+  position: relative
+  overflow: hidden
+  height: 180px
+
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+    transition: transform 0.2s ease-in-out
+
+  &:hover img
+    transform: scale(1.05)
+
+.imgOverlay
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, transparent 80%)
+  display: flex
+  justify-content: center
+  align-items: flex-end
+  opacity: 0
+  transition: opacity 0.2s ease-in-out
+
+.workItem
+  &:hover
+    opacity: 1
+
+.itemText
+  padding: 15px
+  text-align: center
+  display: flex
+  flex-direction: column
+  gap: 10px
+
+.workTitle
+  font-size: 20px
+  font-weight: 600
+  color: #333
+  min-height: 48px
+  transition: color 0.2s ease-in-out
+
+  &:hover
+    color: #007bff
+
+.workDate
+  font-size: 14px
+  color: rgba(18, 13, 24, 0.7)
+  font-weight: 700
+  text-transform: uppercase
+
+@media (max-width: 768px)
+  .workItem
+    width: 100%
+    height: auto
+
+  .imgContainer
+    height: auto
+
+  .workTitle
+    font-size: 18px
+
+@media (max-width: 480px)
+  .workItem
+    min-width: 100%
+
+  .imgContainer
+    height: auto
+
+  .workTitle
+    font-size: 16px

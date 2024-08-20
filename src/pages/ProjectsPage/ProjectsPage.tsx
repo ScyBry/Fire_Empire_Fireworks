@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./styles.module.sass";
-import { works } from "../../constansts";
-import { WorkCard } from "../../components/WorkCard/WorkCard";
+import { works } from "../../constants";
+import { ProjectCard } from "../../components/ProjectCard/ProjectCard.tsx";
 import { motion } from "framer-motion";
 
 const container = {
@@ -26,7 +26,7 @@ const item = {
 
 export const ProjectsPage: React.FC = () => {
   return (
-    <section className={styles.fireworks}>
+    <section className={styles.projects}>
       <div className="container">
         <motion.div
           initial="hidden"
@@ -35,7 +35,7 @@ export const ProjectsPage: React.FC = () => {
           className={styles.works__container}
         >
           {works.map((work) => (
-            <WorkCard variant={item} key={work.id} work={work} />
+            <ProjectCard variant={item} key={work.id} work={work} />
           ))}
         </motion.div>
       </div>

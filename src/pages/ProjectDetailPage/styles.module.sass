@@ -1,31 +1,59 @@
 .workDetails
-	margin-top: 40px
+	margin-top: 2.5rem
 
-.workDetailes__wrapper
+.workDetailsWrapper
 	display: flex
 	flex-direction: column
-	gap: 20px
+	gap: 1.25rem
 
 .title
 	h2
-		font-size: 36px
+		font-size: 2.25rem
 		font-weight: 700
 
 	p
 		color: rgba(18, 13, 20, 0.4)
-		font-size: 14px
-		margin-top: 4px
+		font-size: 0.875rem
+		margin-top: 0.25rem
 		text-transform: uppercase
 
-img
+.gallery
+	display: flex
+	justify-content: center
+	flex-wrap: wrap
+	gap: 1.25rem
+	margin-top: 1.25rem
+
+.workImage
 	width: 100%
-	height: 700px
-	border-radius: 10px
+	max-width: 100%
+	height: auto
 	box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.25)
 
-.text__container
-	padding: 28px 15px
+.textContainer
+	padding: 1.75rem 1rem
 	background-color: #fff
 	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px
-	font-size: 14px
-	margin-top: 20px
+	font-size: 0.875rem
+	margin-top: 1.25rem
+
+@media (max-width: 768px)
+	.workDetailsWrapper
+		gap: 0
+
+	.workImage
+		height: auto
+		max-height: 400px
+
+	.title
+		h2
+			font-size: 1rem !important
+
+		p
+			font-size: 0.75rem
+
+		.gallery
+			margin-top: 0.5rem
+
+	.textContainer
+		font-size: 0.8125rem

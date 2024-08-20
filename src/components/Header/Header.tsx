@@ -2,8 +2,8 @@ import { useState } from "react";
 import styles from "./styles.module.sass";
 import Logo from "../../assets/logo.png";
 import { NavLink } from "react-router-dom";
-import { navLinks } from "../../constansts";
-import { Phone, LocationOn, Menu, Close } from "@mui/icons-material";
+import { navLinks } from "../../constants";
+import { Close, LocationOn, Menu, Phone } from "@mui/icons-material";
 import { IconButton } from "@mui/material";
 
 export const Header = () => {

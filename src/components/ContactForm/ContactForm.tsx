@@ -16,7 +16,8 @@ export const ContactForm = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isValid },
+    reset,
   } = useForm({
     resolver: zodResolver(schema),
     mode: "onChange",
@@ -39,6 +40,7 @@ export const ContactForm = () => {
       (result) => {
         console.log("Email successfully sent!", result.text);
         alert("Ваше сообщение было успешно отправлено!");
+        reset();
       },
       (error) => {
         console.log("Failed to send email.", error.text);
@@ -83,7 +85,9 @@ export const ContactForm = () => {
         )}
       </div>
 
-      <Button type="submit">Отправить</Button>
+      <Button disabled={!isValid} type="submit">
+        Отправить
+      </Button>
     </form>
   );
 };

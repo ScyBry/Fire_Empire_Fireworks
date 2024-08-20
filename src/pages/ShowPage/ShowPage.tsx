@@ -1,5 +1,5 @@
 import { ShowItem } from "../../components/ShowItem/ShowItem";
-import { showItems } from "../../constansts";
+import { showItems } from "../../constants";
 import styles from "./styles.module.sass";
 
 export const ShowPage = () => {

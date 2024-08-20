@@ -3,7 +3,7 @@ import styles from "./styles.module.sass";
 import logo from "../../assets/logo.png";
 import clock_icon from "../../assets/icons/clock-icon.svg";
 import smartphone_icon from "../../assets/icons/smartphone-icon.svg";
-import { navLinks } from "../../constansts";
+import { navLinks } from "../../constants";
 import { NavLink } from "react-router-dom";
 
 export const Footer: FC = () => {

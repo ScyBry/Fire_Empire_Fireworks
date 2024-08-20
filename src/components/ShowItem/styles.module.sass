@@ -9,8 +9,15 @@
 	overflow: hidden
 	transition: transform 0.3s ease
 
+	@media (max-width: 768px)
+		flex-direction: column
+		max-height: none
+
 	&:nth-child(2n + 1)
 		flex-direction: row-reverse
+		@media (max-width: 768px)
+			flex-direction: column
+			max-height: none
 
 	&:hover
 		transform: scale(1.05)
@@ -19,6 +26,9 @@
 .text__wrapper
 	width: 50%
 
+	@media (max-width: 768px)
+		width: 100%
+
 .img__wrapper
 	img
 		width: 100%
@@ -26,12 +36,18 @@
 		object-fit: cover
 		transition: border-width 0.3s ease
 
+		@media (max-width: 768px)
+			height: 300px
+
 		&:hover
 			border: 10px solid #d09e6e
 
 .text__wrapper
 	padding: 30px 45px
 	text-align: center
+
+	@media (max-width: 768px)
+		padding: 20px
 
 	h3
 		font-size: 26px
