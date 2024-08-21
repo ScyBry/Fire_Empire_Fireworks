@@ -7,6 +7,7 @@ import { CoalPage } from "../pages/CoalPage/CoalPage.tsx";
 import { ContactsPage } from "../pages/ContactsPage/ContactsPage.tsx";
 import { ShowPage } from "../pages/ShowPage/ShowPage.tsx";
 import { OurWorks } from "../pages/OurWorks/OurWorks.tsx";
+import { PageTitle } from "../utils/utils.tsx";
 
 export const router = createBrowserRouter([
   {
@@ -15,15 +16,30 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <MainPage />,
+        element: (
+          <>
+            <PageTitle title="Главная | Империя огня" />
+            <MainPage />
+          </>
+        ),
       },
       {
         path: "/projects",
-        element: <ProjectsPage />,
+        element: (
+          <>
+            <PageTitle title="Проекты | Империя огня" />
+            <ProjectsPage />
+          </>
+        ),
       },
       {
         path: "/shou",
-        element: <ShowPage />,
+        element: (
+          <>
+            <PageTitle title="Шоу | Империя огня" />
+            <ShowPage />
+          </>
+        ),
       },
       {
         path: "/workDetail/:id",
@@ -31,15 +47,30 @@ export const router = createBrowserRouter([
       },
       {
         path: "/coal",
-        element: <CoalPage />,
+        element: (
+          <>
+            <PageTitle title="Уголь | Империя огня" />
+            <CoalPage />
+          </>
+        ),
       },
       {
         path: "/contacts",
-        element: <ContactsPage />,
+        element: (
+          <>
+            <PageTitle title="Контакты | Империя огня" />
+            <ContactsPage />
+          </>
+        ),
       },
       {
         path: "/ourWorks",
-        element: <OurWorks />,
+        element: (
+          <>
+            <PageTitle title="Наши работы | Империя огня" />
+            <OurWorks />
+          </>
+        ),
       },
     ],
   },

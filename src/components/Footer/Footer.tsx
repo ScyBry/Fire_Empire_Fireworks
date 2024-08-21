@@ -38,14 +38,14 @@ export const Footer: FC = () => {
             </div>
             <div className={styles.number__item}>
               <img src={smartphone_icon} alt="smartphone_icon" />
-              <p>+375(33) 377-36-43</p>
+              <a href="tel:+375(33) 377-36-43">+375(33) 377-36-43</a>
             </div>
             <div className={styles.number__item}>
-              <p>8 (01511) 7-03-37</p>
+              <a href="tel:8 (01511) 7-03-37">8 (01511) 7-03-37</a>
             </div>
           </div>
           <div className={styles.contacts__wrapper}>
-            <p>fireempire@mail.ru</p>
+            <a href="mailto:fireempire@mail.ru">fireempire@mail.ru</a>
           </div>
         </div>
       </div>
