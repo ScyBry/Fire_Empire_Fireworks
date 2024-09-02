@@ -4,7 +4,6 @@ import styles from "./styles.module.sass";
 import { Header } from "../../components/Header/Header";
 import { AboutCompany } from "../../components/AboutCompany/AboutCompany";
 import { useEffect } from "react";
-import { Question } from "../../components/Question/Question";
 import { ToastContainer } from "react-toastify";
 import { motion } from "framer-motion";
 
@@ -23,8 +22,9 @@ export const Layout = () => {
       <main className={styles.app__content}>
         <Outlet />
       </main>
+
       <AboutCompany />
-      <Question />
+
       <Footer />
     </motion.div>
   );

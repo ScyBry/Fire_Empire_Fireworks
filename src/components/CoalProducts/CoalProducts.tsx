@@ -1,5 +1,6 @@
 import styles from "./styles.module.sass";
 import { FC } from "react";
+
 import { CoalProductCard } from "./CoalProductCard/CoalProductCard.tsx";
 import coal1 from "../../assets/coal/3kgcoal.jpg";
 import coal2 from "../../assets/coal/10kgcoal.jpg";

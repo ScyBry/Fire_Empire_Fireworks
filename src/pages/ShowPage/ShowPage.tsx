@@ -7,7 +7,7 @@ export const ShowPage = () => {
     <section className={styles.show}>
       <div className="container">
         <header className={styles.show__header}>
-          <h2>Организация шоу</h2>
+          <h2>Организация пиротехнического шоу</h2>
         </header>
 
         <div className={styles.items__wrapper}>

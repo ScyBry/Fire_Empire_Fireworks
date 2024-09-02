@@ -22,7 +22,7 @@ export const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            ОРГАНИЗАЦИЯ ШОУ
+            ОРГАНИЗАЦИЯ ПИРОТЕХНИЧЕСКОГО ШОУ
           </motion.h1>
         </div>
         <motion.div
