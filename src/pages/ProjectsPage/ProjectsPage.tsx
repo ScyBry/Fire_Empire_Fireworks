@@ -28,6 +28,9 @@ export const ProjectsPage: React.FC = () => {
   return (
     <section className={styles.projects}>
       <div className="container">
+        <div>
+          <h2>Наши работы</h2>
+        </div>
         <motion.div
           initial="hidden"
           animate="visible"

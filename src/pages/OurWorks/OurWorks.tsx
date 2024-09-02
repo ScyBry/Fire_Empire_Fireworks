@@ -12,6 +12,9 @@ import styles from "./styles.module.sass";
 export const OurWorks = () => {
   return (
     <section className={`${styles.ourWorks} container`}>
+      <div>
+        <h2>Наши работы</h2>
+      </div>
       <LightGallery
         mode="lg-fade"
         pager={false}

@@ -6,6 +6,8 @@ import { AboutCompany } from "../../components/AboutCompany/AboutCompany";
 import { useEffect } from "react";
 import { ToastContainer } from "react-toastify";
 import { motion } from "framer-motion";
+import { Feedback } from "@mui/icons-material";
+import { FeedbackForm } from "../../components/Feedback/Feedback";
 
 export const Layout = () => {
   const location = useLocation();
@@ -25,6 +27,7 @@ export const Layout = () => {
 
       <AboutCompany />
 
+      <FeedbackForm />
       <Footer />
     </motion.div>
   );
