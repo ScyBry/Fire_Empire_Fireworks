@@ -2,7 +2,6 @@ import { IShowItem, IWork } from "../types";
 import firework1_1 from "../assets/fireworks/firework1/firework1-1.jpg";
 import firework1_2 from "../assets/fireworks/firework1/firework1-2.jpg";
 import firework1_3 from "../assets/fireworks/firework1/firework1-3.jpg";
-import instagram from "../assets/instagram-icon.svg";
 import show_img1 from "../assets/show_images/show_img1.jpg";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import InstagramIcon from "@mui/icons-material/Instagram";
