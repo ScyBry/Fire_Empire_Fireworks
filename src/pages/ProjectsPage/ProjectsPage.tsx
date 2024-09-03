@@ -3,6 +3,7 @@ import styles from "./styles.module.sass";
 import { works } from "../../constants";
 import { ProjectCard } from "../../components/ProjectCard/ProjectCard.tsx";
 import { motion } from "framer-motion";
+import { PageTitle } from "../../components/PageTitle/PageTitle.tsx";
 
 const container = {
   hidden: { opacity: 1, scale: 0 },
@@ -28,9 +29,7 @@ export const ProjectsPage: React.FC = () => {
   return (
     <section className={styles.projects}>
       <div className="container">
-        <div>
-          <h2>Наши работы</h2>
-        </div>
+        <PageTitle title="Наши работы" />
         <motion.div
           initial="hidden"
           animate="visible"

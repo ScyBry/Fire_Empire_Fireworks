@@ -36,7 +36,11 @@ export const Header = () => {
               <NavLink
                 key={link.name}
                 to={link.link}
-                className={`hover-underline-animation ${styles.navigation__link}`}
+                className={({ isActive }) =>
+                  `${styles.navigation__link} hover-underline-animation ${
+                    isActive ? "activeLink" : ""
+                  }`
+                }
                 onClick={() => setIsMenuOpen(false)}
               >
                 {link.name}

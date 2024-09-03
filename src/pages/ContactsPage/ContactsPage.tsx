@@ -27,7 +27,6 @@ export const ContactsPage = () => {
           </div>
         </div>
       </div>
-      бю.ьб.х.эх.9х-з х -х х- -х ь-зх0
     </section>
   );
 };

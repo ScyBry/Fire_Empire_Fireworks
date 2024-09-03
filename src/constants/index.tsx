@@ -2,10 +2,10 @@ import { IShowItem, IWork } from "../types";
 import firework1_1 from "../assets/fireworks/firework1/firework1-1.jpg";
 import firework1_2 from "../assets/fireworks/firework1/firework1-2.jpg";
 import firework1_3 from "../assets/fireworks/firework1/firework1-3.jpg";
-import viber from "../assets/viber-icon.svg";
-import youtube from "../assets/youtube-icon.svg";
 import instagram from "../assets/instagram-icon.svg";
 import show_img1 from "../assets/show_images/show_img1.jpg";
+import YouTubeIcon from "@mui/icons-material/YouTube";
+import InstagramIcon from "@mui/icons-material/Instagram";
 
 export const works: IWork[] = [
   {
@@ -67,16 +67,12 @@ export const works: IWork[] = [
 
 export const socialLinks = [
   {
-    img: viber,
+    img: <YouTubeIcon />,
     link: "https://vk.com/poleg2015",
   },
   {
-    img: youtube,
+    img: <InstagramIcon />,
     link: "https://www.linkedin.com/in/%D0%BE%D0%BB%D0%B5%D0%B3-%D0%BF%D1%83%D0%BB%D0%BA%D0%BE-a33156288/",
-  },
-  {
-    img: instagram,
-    link: "https://github.com/ScyBry",
   },
 ];
 
@@ -86,20 +82,20 @@ export const navLinks = [
     link: "/shou",
   },
   {
-    name: "Проекты",
-    link: "/projects",
-  },
-  {
     name: "Уголь",
     link: "/coal",
   },
   {
-    name: "Контакты",
-    link: "/contacts",
+    name: "Проекты",
+    link: "/projects",
   },
   {
     name: "Наши работы",
     link: "/ourWorks",
+  },
+  {
+    name: "Контакты",
+    link: "/contacts",
   },
 ];
 

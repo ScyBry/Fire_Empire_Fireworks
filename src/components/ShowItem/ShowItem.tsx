@@ -22,8 +22,8 @@ export const ShowItem: FC<ShowItemProps> = ({ item }) => {
         <img src={imgSrc} alt={title} />
       </div>
       <div className={styles.text__wrapper}>
-        <h3>{title}</h3>
-        <h4>{subtitle}</h4>
+        <h2>{title}</h2>
+        <h3>{subtitle}</h3>
         <p>{text}</p>
       </div>
     </motion.article>

@@ -33,8 +33,8 @@ export const CoalProductCard: FC<CoalProductCardProps> = ({
       <div className={styles.coalProduct__details}>
         <h3 className={styles.coalProduct__title}>{title}</h3>
         <div className={styles.coalProduct__description}>
-          {description.split("\n").map((line, index) => (
-            <p key={index}>{line}</p>
+          {description.split("\n").map((line) => (
+            <p key={line}>{line}</p>
           ))}
         </div>
         <Button onClick={handleModal}>Заказать</Button>

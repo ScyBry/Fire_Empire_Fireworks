@@ -8,13 +8,12 @@ import "lightgallery/css/lg-zoom.css";
 import "lightgallery/css/lg-thumbnail.css";
 
 import styles from "./styles.module.sass";
+import { PageTitle } from "../../components/PageTitle/PageTitle.tsx";
 
 export const OurWorks = () => {
   return (
     <section className={`${styles.ourWorks} container`}>
-      <div>
-        <h2>Наши работы</h2>
-      </div>
+      <PageTitle title={"Наши работы"} />
       <LightGallery
         mode="lg-fade"
         pager={false}

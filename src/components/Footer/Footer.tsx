@@ -5,6 +5,7 @@ import clock_icon from "../../assets/icons/clock-icon.svg";
 import smartphone_icon from "../../assets/icons/smartphone-icon.svg";
 import { navLinks } from "../../constants";
 import { NavLink } from "react-router-dom";
+import { SocialLinks } from "../SocialLinks/SocialLinks";
 
 export const Footer: FC = () => {
   return (
@@ -22,7 +23,9 @@ export const Footer: FC = () => {
               <NavLink
                 key={link.name}
                 to={link.link}
-                className="hover-underline-animation"
+                className={({ isActive }) =>
+                  `hover-underline-animation ${isActive ? "activeLink" : ""}`
+                }
               >
                 {link.name}
               </NavLink>
@@ -44,6 +47,7 @@ export const Footer: FC = () => {
               <a href="tel:8 (01511) 7-03-37">8 (01511) 7-03-37</a>
             </div>
           </div>
+          <SocialLinks />
           <div className={styles.contacts__wrapper}>
             <a href="mailto:fireempire@mail.ru">fireempire@mail.ru</a>
           </div>

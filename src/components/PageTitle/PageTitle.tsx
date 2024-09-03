@@ -1,14 +1,14 @@
-// import { FC } from "react";
-// import styles from "./styles.module.sass";
+import { FC } from "react";
+import styles from "./styles.module.sass";
 
-// type PageTitleProps = {
-//   title: string;
-// };
+interface PageTitleProps {
+  title: string;
+}
 
-// export const PageTitle: FC<PageTitleProps> = () => {
-//   return (
-//     <div className={styles.page__title}>
-//       <h2></h2>
-//     </div>
-//   );
-// };
+export const PageTitle: FC<PageTitleProps> = ({ title }) => {
+  return (
+    <div className={styles.pageTitle}>
+      <h2>{title}</h2>
+    </div>
+  );
+};
