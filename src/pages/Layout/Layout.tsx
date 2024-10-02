@@ -6,7 +6,7 @@ import { AboutCompany } from "../../components/AboutCompany/AboutCompany";
 import { useEffect } from "react";
 import { ToastContainer } from "react-toastify";
 import { motion } from "framer-motion";
-import { FeedbackForm } from "../../components/Feedback/Feedback";
+import { FeedbackForm } from "../../components/FeedbackForm/FeedbackForm";
 
 export const Layout = () => {
   const location = useLocation();

@@ -1,12 +1,12 @@
-import styles from "./styles.module.sass";
-import { FC } from "react";
+import styles from './styles.module.sass'
+import { FC } from 'react'
 
-import { CoalProductCard } from "./CoalProductCard/CoalProductCard.tsx";
-import coal1 from "../../assets/coal/3kgcoal.jpg";
-import coal2 from "../../assets/coal/10kgcoal.jpg";
+import { CoalProductCard } from './CoalProductCard/CoalProductCard.tsx'
+import coal1 from '../../assets/coal/3kgcoal.webp'
+import coal2 from '../../assets/coal/10kgcoal.webp'
 
 interface CoalProductsProps {
-  handleModal: () => void;
+    handleModal: () => void
 }
 
 const productDescription1 = `
@@ -23,7 +23,7 @@ const productDescription1 = `
     Любые идеи для любого случая: от семейной трапезы до пикника с друзьями, любые блюда на вкус: грили из мяса, рыбы, птицы, изысканные вегетарианские блюда и овощи.
     
     Вы приготовите за считанные минуты с высоким гастрономическим эффектом.
-  `;
+  `
 
 const productDescription2 = `
     УГОЛЬ ДРЕВЕСНЫЙ «ИМПЕРСКИЙ»
@@ -39,35 +39,35 @@ const productDescription2 = `
     Любые идеи для любого случая: от семейной трапезы до пикника с друзьями, любые блюда на вкус: грили из мяса, рыбы, птицы, изысканные вегетарианские блюда и овощи.
     
     Вы приготовите за считанные минуты с высоким гастрономическим эффектом.
-  `;
+  `
 
 export const CoalProducts: FC<CoalProductsProps> = ({ handleModal }) => {
-  return (
-    <section className={styles.coalProducts}>
-      <div className="container">
-        <div className={styles.coalProducts__wrapper}>
-          <div className={styles.coalProducts__header}>
-            <h2>УГОЛЬ ДРЕВЕСНЫЙ «ИМПЕРСКИЙ»</h2>
-          </div>
+    return (
+        <section className={styles.coalProducts}>
+            <div className="container">
+                <div className={styles.coalProducts__wrapper}>
+                    <div className={styles.coalProducts__header}>
+                        <h2>УГОЛЬ ДРЕВЕСНЫЙ «ИМПЕРСКИЙ»</h2>
+                    </div>
 
-          <CoalProductCard
-            imgSrc={coal1}
-            imgAlt="Упаковка 3 кг"
-            title="УГОЛЬ ДРЕВЕСНЫЙ «ИМПЕРСКИЙ»"
-            description={productDescription1}
-            handleModal={handleModal}
-          />
+                    <CoalProductCard
+                        imgSrc={coal1}
+                        imgAlt="Упаковка 3 кг"
+                        title="УГОЛЬ ДРЕВЕСНЫЙ «ИМПЕРСКИЙ»"
+                        description={productDescription1}
+                        handleModal={handleModal}
+                    />
 
-          <CoalProductCard
-            imgSrc={coal2}
-            imgAlt="Упаковка 10 кг"
-            title="УГОЛЬ ДРЕВЕСНЫЙ «ИМПЕРСКИЙ»"
-            description={productDescription2}
-            reverse={true}
-            handleModal={handleModal}
-          />
-        </div>
-      </div>
-    </section>
-  );
-};
+                    <CoalProductCard
+                        imgSrc={coal2}
+                        imgAlt="Упаковка 10 кг"
+                        title="УГОЛЬ ДРЕВЕСНЫЙ «ИМПЕРСКИЙ»"
+                        description={productDescription2}
+                        reverse={true}
+                        handleModal={handleModal}
+                    />
+                </div>
+            </div>
+        </section>
+    )
+}

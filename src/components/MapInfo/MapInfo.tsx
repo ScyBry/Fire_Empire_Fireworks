@@ -21,7 +21,7 @@ export const MapInfo = () => {
           </div>
           <div className={styles.info__item}>
             <Phone fontSize="small" />
-            <a href="tel:+375(33)377-36-43">+375 (33) 377-36-43</a>
+            <a href="tel:+375(33)343-52-67">+375 (33) 343-52-67</a>
           </div>
         </div>
         <div>

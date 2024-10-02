@@ -4,6 +4,7 @@ import { z } from "zod";
 import styles from "./styles.module.sass";
 import { Button } from "../Button/Button";
 import emailjs from "@emailjs/browser";
+import { toast } from "react-toastify";
 
 const schema = z.object({
   name: z.string().min(1, "Имя обязательно"),
@@ -37,14 +38,12 @@ export const ContactForm = () => {
     };
 
     emailjs.send(serviceId, templateId, template, userId).then(
-      (result) => {
-        console.log("Email successfully sent!", result.text);
-        alert("Ваше сообщение было успешно отправлено!");
+      () => {
+        toast.success("Ваше сообщение было успешно отправлено!");
         reset();
       },
-      (error) => {
-        console.log("Failed to send email.", error.text);
-        alert(
+      () => {
+        toast.error(
           "Произошла ошибка при отправке сообщения. Пожалуйста, попробуйте еще раз.",
         );
       },

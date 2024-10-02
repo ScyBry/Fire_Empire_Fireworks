@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import styles from "./styles.module.sass";
 import { Button } from "../Button/Button";
 import emailjs from "@emailjs/browser";
+import { toast } from "react-toastify";
 
 const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID!;
 const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID!;
@@ -31,6 +32,15 @@ export const FeedbackForm: React.FC = () => {
     mode: "onChange",
   });
 
+  const containerVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { staggerChildren: 0.2, duration: 0.8 },
+    },
+  };
+
   const onSubmit = (data: FormData) => {
     const template = {
       name: data.name,
@@ -41,14 +51,12 @@ export const FeedbackForm: React.FC = () => {
     };
 
     emailjs.send(serviceId, templateId, template, userId).then(
-      (result) => {
-        console.log("Email successfully sent!", result.text);
-        alert("Ваше сообщение было успешно отправлено!");
+      () => {
+        toast.success("Ваше сообщение было успешно отправлено!");
         reset();
       },
-      (error) => {
-        console.log("Failed to send email.", error.text);
-        alert(
+      () => {
+        toast.error(
           "Произошла ошибка при отправке сообщения. Пожалуйста, попробуйте еще раз.",
         );
       },
@@ -58,10 +66,10 @@ export const FeedbackForm: React.FC = () => {
   return (
     <motion.section
       className={styles.feedback_form}
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      viewport={{ once: true }}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.5 }}
+      variants={containerVariants}
     >
       <div className={styles.container}>
         <div className={styles.form__title}>
