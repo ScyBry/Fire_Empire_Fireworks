@@ -9,7 +9,7 @@ import styles from './styles.module.sass'
 import { PageTitle } from '../../components/PageTitle/PageTitle.tsx'
 import { motion } from 'framer-motion'
 
-export const gallery = import.meta.glob('/src/assets/fireworks/*', {
+export const gallery = import.meta.glob('./../../assets/fireworks/*', {
     eager: true,
     query: '?url',
     import: 'default',
