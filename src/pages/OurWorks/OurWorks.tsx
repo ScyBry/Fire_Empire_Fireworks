@@ -8,7 +8,12 @@ import 'lightgallery/css/lg-thumbnail.css'
 import styles from './styles.module.sass'
 import { PageTitle } from '../../components/PageTitle/PageTitle.tsx'
 import { motion } from 'framer-motion'
-import { gallery } from '../../constants/index.tsx'
+
+export const gallery = import.meta.glob('/src/assets/fireworks/*', {
+    eager: true,
+    query: '?url',
+    import: 'default',
+})
 
 const container = {
     hidden: { opacity: 0, scale: 0.8 },
